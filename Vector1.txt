@@ -1,0 +1,41 @@
+import java.util.*;
+class Vector1 
+{
+    public static void main(String[] args)
+    {
+    int n;
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter n value: ");
+    n=sc.nextInt();
+    Vector<Integer> v = new Vector<Integer>(n);
+    System.out.println("Enter n values: ");
+    for (int i =0;i<=n;i++)
+    {
+        v.add(sc.nextInt());
+    }
+    System.out.println("Enter value: ");
+    int n1=sc.nextInt(); 
+    System.out.println("Update value: ");
+    int n2=sc.nextInt(); 
+    if(v.contains(n1))
+    {
+        int j=v.indexOf(n1);
+        v.set(j,n1);
+        System.out.println(v);
+    }
+    else
+    System.out.println("Flase");
+    }
+}
+
+Output____________________________________________________________________
+Enter n value: 5
+Enter n values: 
+10
+20
+30
+40
+50
+Enter value: 20
+Update value: 99
+10 99 30 40 50
